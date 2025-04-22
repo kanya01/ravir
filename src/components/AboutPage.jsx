@@ -29,6 +29,11 @@ const AboutPage = () => {
         }
     ];
     // --- End Testimonial Data ---
+    const teamMembers = [
+        { name: "Lucy Kanya", title: "Director" },
+        { name: "Flo Thungu", title: "Regional Researcher" },
+        { name: "Moses Mwangi", title: "Product Engineer" }
+    ];
 
     // --- useEffect for general page animations (fade-in, scroll-fade) ---
     useEffect(() => {
@@ -96,6 +101,9 @@ const AboutPage = () => {
         resetInterval(); // Reset interval on manual navigation
     };
     // --- End Navigation Functions ---
+    const getInitials = (name) => {
+        return name.split(' ').map(n => n[0]).join('');
+    };
 
     return (
         <div className="min-h-screen flex flex-col bg-white">
@@ -145,6 +153,39 @@ const AboutPage = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* --- NEW: Meet the Team Section --- */}
+                <section className="py-32 px-4">
+                    <div className="container mx-auto max-w-4xl">
+                        <h2 className="text-3xl font-extralight text-gray-800 mb-16 text-center scroll-fade">
+                            Meet the Team
+                        </h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+                            {teamMembers.map((member, index) => (
+                                <div
+                                    key={index}
+                                    className="text-center scroll-fade"
+                                    // Optional: Add slight delay based on index for staggered effect
+                                    // style={{ transitionDelay: `${index * 100}ms` }}
+                                >
+                                    {/* Placeholder for image/avatar */}
+                                    <div className="mx-auto h-24 w-24 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 text-2xl font-semibold mb-4">
+                                        {getInitials(member.name)}
+                                    </div>
+                                    <h4 className="text-lg font-medium text-gray-800 mb-1">
+                                        {member.name}
+                                    </h4>
+                                    <p className="text-sm text-blue-600">
+                                        {member.title}
+                                    </p>
+                                    {/* Optional: Add social links or short bio later */}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+                {/* --- End Meet the Team Section --- */}
+
 
                 {/* --- Testimonials section --- */}
                 <section className="py-32 px-4">
