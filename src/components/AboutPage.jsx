@@ -31,7 +31,7 @@ const AboutPage = () => {
     // --- End Testimonial Data ---
     const teamMembers = [
         { name: "Lucy Kanya", title: "Director" },
-        { name: "Flo Thungu", title: "Regional Researcher" },
+        { name: "Florence Thungu", title: "Programs Lead" },
         { name: "Moses Mwangi", title: "Product Engineer" }
     ];
 
