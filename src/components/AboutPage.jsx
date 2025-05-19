@@ -29,11 +29,11 @@ const AboutPage = () => {
         }
     ];
     // --- End Testimonial Data ---
-    const teamMembers = [
-        { name: "Lucy Kanya", title: "Director" },
-        { name: "Florence Thungu", title: "Programs Lead" },
-        { name: "Moses Mwangi", title: "Product Engineer" }
-    ];
+    // const teamMembers = [
+    //     { name: "Lucy Kanya", title: "Director" },
+    //     { name: "Florence Thungu", title: "Programs Lead" },
+    //     { name: "Moses Mwangi", title: "Product Engineer" }
+    // ];
 
     // --- useEffect for general page animations (fade-in, scroll-fade) ---
     useEffect(() => {
